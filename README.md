@@ -9,3 +9,6 @@
 #### JWT
 #### Cloudinary
 #### Other stuff perhaps
+
+## Commands Run:
+- npx nuxi init birds-i-vue
