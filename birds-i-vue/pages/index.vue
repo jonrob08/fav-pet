@@ -1,6 +1,6 @@
 <template>
     <div>
-        <MainSection title="Home" :loading="false">
+        <MainSection title="Home" :loading="true">
             content
         </MainSection>
     </div>

@@ -1,10 +1,10 @@
 <template>
     <div>
-        <div>
-            <h2>{{ props.title }}</h2>
+        <div class="sticky top-0 px-4 bg-white/80 backdrop-blur-md dark:bg-dim-900/80">
+            <h2 class="text-xl font-bold text-gray-800 dark:text-gray-100">{{ props.title }}</h2>
         </div>
         <div v-if="loading">
-            <span>loading</span>
+             <UISpinner />
         </div>
         <div v-else>
             <slot></slot>
