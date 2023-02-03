@@ -13,9 +13,7 @@
 
           <!--main content-->
           <main class="col-span-12 md:col-span-8 xl:col-span-6 bg-red-500">
-            <h1>
-              Main section
-            </h1>
+            <router-view />
           </main>
           <!--right sidebar-->
 
