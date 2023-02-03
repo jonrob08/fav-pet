@@ -1,7 +1,9 @@
 <template>
     <div class="flex flex-col">
-        <div></div>
-        <div></div>
+        <!-- Preview Card: What's Happening? -->
+        <SidebarRightPreviewCard title="What's Happening?" />
+        <!-- Preview Card: Who to Follow -->
+        <SidebarRightPreviewCard title="Who to Follow" />
     </div>
 </template>
 <script setup>
