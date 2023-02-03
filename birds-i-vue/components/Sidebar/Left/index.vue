@@ -20,19 +20,69 @@
 
             <SidebarLeftTab active>
                 <template v-slot:icon>
-                    <HomeIcon />
+                    <HashtagIcon />
                 </template>
                 <template v-slot:name>
-                    Home
+                    Explore
                 </template>
             </SidebarLeftTab>
-            
+
+
             <SidebarLeftTab active>
                 <template v-slot:icon>
-                    <HomeIcon />
+                    <BellIcon />
                 </template>
                 <template v-slot:name>
-                    Home
+                    Notifications
+                </template>
+            </SidebarLeftTab>
+
+            <SidebarLeftTab active>
+                <template v-slot:icon>
+                    <InboxIcon />
+                </template>
+                <template v-slot:name>
+                    Messages
+                </template>
+            </SidebarLeftTab>
+
+
+            <SidebarLeftTab active>
+                <template v-slot:icon>
+                    <BookmarkIcon />
+                </template>
+                <template v-slot:name>
+                    Bookmarks
+                </template>
+            </SidebarLeftTab>
+
+
+            <SidebarLeftTab active>
+                <template v-slot:icon>
+                    <DocumentTextIcon />
+                </template>
+                <template v-slot:name>
+                    Lists
+                </template>
+            </SidebarLeftTab>
+
+
+            <SidebarLeftTab active>
+                <template v-slot:icon>
+                    <UserIcon />
+                </template>
+                <template v-slot:name>
+                    Profile
+                </template>
+            </SidebarLeftTab>
+
+
+            <SidebarLeftTab active>
+                <template v-slot:icon>
+                    <DotsCircleHorizontalIcon />
+                </template>
+                <template v-slot:name>
+                    More
                 </template>
             </SidebarLeftTab>
         </div>
@@ -41,5 +91,7 @@
 </template>
 <script setup>
 import { HomeIcon } from "@heroicons/vue/solid"
+// hardcoded active icon outline switch effect
+import { HashtagIcon, BellIcon, InboxIcon, BookmarkIcon, DocumentTextIcon, UserIcon, DotsCircleHorizontalIcon } from "@heroicons/vue/outline"
 const { defaultTransition } = useTailwindConfig()
 </script>
