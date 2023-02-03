@@ -21,7 +21,8 @@ export default defineEventHandler(async (event) => {
     username,
     email,
     password,
-    name
+    name,
+    profileImage: 'https://picsum.photos/200/200'
   }
 
   const user = await createUser(userData)

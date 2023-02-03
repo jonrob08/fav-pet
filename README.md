@@ -19,3 +19,9 @@
 - npm i prisma -D
 - npx prisma (test)
 - npx prisma init
+- npx prisma db push (after model is created)
+- npm i bcrypt
+
+### Dev Notes
+- it looks like prisma doesn't have a native way to exclude fields yet, but there are other options
+https://www.prisma.io/docs/concepts/components/prisma-client/excluding-fields
