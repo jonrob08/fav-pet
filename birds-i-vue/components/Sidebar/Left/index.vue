@@ -9,7 +9,12 @@
         </div>
 
         <SidebarLeftTab>
-            <HomeIcon />
+            <template v-slot:icon>
+                <HomeIcon />
+            </template>
+            <template v-slot:name>
+                Home
+            </template>
         </SidebarLeftTab>
 
     </div>
