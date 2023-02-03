@@ -14,10 +14,17 @@
           <!--main content-->
           <main class="col-span-12 md:col-span-8 xl:col-span-6 bg-red-500">
             <h1>
-              asd
+              Main section
             </h1>
           </main>
           <!--right sidebar-->
+
+
+          <div class="hidden md:block xs-col-span-1 xl:col-span-4 md:col-span-3 bg-blue-600">
+            <div class="sticky top-0">
+              <h1>Right Sidebar</h1>
+            </div>
+          </div>
         </div>
       </div>
     </div>
