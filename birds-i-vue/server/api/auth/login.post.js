@@ -1,6 +1,7 @@
 import { sendError } from "h3";
 import { getUser } from "~~/server/db/users";
 import bcrypt from "bcrypt"
+import { generateTokens } from "~~/server/utils/jwt";
 
 
 export default defineEventHandler(async (event) => {
@@ -25,6 +26,12 @@ export default defineEventHandler(async (event) => {
 
   // compare passwords
   const passMatch = await bcrypt.compare(password, user.password)
+
+  // generate tokens
+  // access token
+  // refresh token
+  const { accessToken, refreshToken } = generateTokens()
+
 
   return {
     user: user,
