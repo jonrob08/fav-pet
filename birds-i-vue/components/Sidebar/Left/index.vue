@@ -8,14 +8,34 @@
             </nuxt-link>
         </div>
 
-        <SidebarLeftTab active>
-            <template v-slot:icon>
-                <HomeIcon />
-            </template>
-            <template v-slot:name>
-                Home
-            </template>
-        </SidebarLeftTab>
+        <div class="mt-2 space-y-3">
+            <SidebarLeftTab active>
+                <template v-slot:icon>
+                    <HomeIcon />
+                </template>
+                <template v-slot:name>
+                    Home
+                </template>
+            </SidebarLeftTab>
+
+            <SidebarLeftTab active>
+                <template v-slot:icon>
+                    <HomeIcon />
+                </template>
+                <template v-slot:name>
+                    Home
+                </template>
+            </SidebarLeftTab>
+            
+            <SidebarLeftTab active>
+                <template v-slot:icon>
+                    <HomeIcon />
+                </template>
+                <template v-slot:name>
+                    Home
+                </template>
+            </SidebarLeftTab>
+        </div>
 
     </div>
 </template>
