@@ -2,6 +2,7 @@ import { sendError } from "h3";
 import { getUser } from "~~/server/db/users";
 import bcrypt from "bcrypt"
 import { generateTokens } from "~~/server/utils/jwt";
+import { userTransformer } from "~~/server/transformers/user";
 
 
 export default defineEventHandler(async (event) => {
@@ -30,11 +31,13 @@ export default defineEventHandler(async (event) => {
   // generate tokens
   // access token
   // refresh token
-  const { accessToken, refreshToken } = generateTokens()
+  const { accessToken, refreshToken } = generateTokens(user)
 
 
   return {
-    user: user,
-    passMatch
+    // user: user,
+    // passMatch
+    access_token: accessToken,
+    user: userTransformer(user)
   };
 });
