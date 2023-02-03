@@ -12,17 +12,17 @@
           </div>
 
           <!--main content-->
-          <main class="col-span-12 md:col-span-8 xl:col-span-6 bg-red-500">
+          <!-- <main class="col-span-12 md:col-span-8 xl:col-span-6 bg-red-500">
             <h1>
               Main section
             </h1>
-          </main>
+          </main> -->
           <!--right sidebar-->
 
 
-          <div class="hidden md:block xs-col-span-1 xl:col-span-4 md:col-span-3 bg-blue-600">
+          <div class="col-span-12 md:block xl:col-span-4 md:col-span-3 bg-blue-600">
             <div class="sticky top-0">
-              <h1>Right Sidebar</h1>
+              <SidebarRight />
             </div>
           </div>
         </div>
