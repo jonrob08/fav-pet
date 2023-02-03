@@ -12,3 +12,10 @@
 
 ## Commands Run:
 - npx nuxi init birds-i-vue
+- npm i -D @nuxtjs/tailwindcss
+- npx tailwindcss init
+- npm run dev
+- npm i @heroicons/vue
+- npm i prisma -D
+- npx prisma (test)
+- npx prisma init

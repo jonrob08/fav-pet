@@ -1,19 +1,18 @@
+import { sendError } from "h3";
+
 export default defineEventHandler(async (event) => {
-    // useBody is now readBody!!
-    const body = await readBody(event)
-    // tested this on postman
-    // http://localhost:3000/api/auth/register
-    // {
-    //     "username": "dev",
-    //     "password": "password",
-    //     "repeatPassword": "password",
-    //     "email": "jon@gmail.com",
-    //     "name": "jon"
-    // }
+  const body = await readBody(event);
 
-    const { username, password, repeatPassword, email, name } = body
+  const { username, password, repeatPassword, email, name } = body;
 
-    return {
-        body: body
-    }
-})
+  if (!username || !email || !password || !repeatPassword || !name) {
+    return sendError(
+      event,
+      createError({ statusCode: 400, statusMessage: "Invalid Entry" })
+    );
+  }
+
+  return {
+    body: body,
+  };
+});
