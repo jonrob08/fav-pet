@@ -47,9 +47,9 @@ export default () => {
     const getUser = () => {
         return new Promise(async (resolve, reject) => {
             try {
-                const data = await $fetch('/api/auth/user')
+                const data = await useFetchApi('/api/auth/user')
                 
-                setToken(data.access_token)
+                setUser(data.user)
                 resolve(true)
             } catch (error) {
                 reject(error)
@@ -72,6 +72,7 @@ export default () => {
     return {
         login,
         useAuthUser,
+        useAuthToken,
         initAuth
     }
 }
