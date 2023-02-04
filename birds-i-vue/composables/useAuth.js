@@ -24,7 +24,6 @@ export default () => {
                 })
                 setToken(data.access_token)
                 setUser(data.user)
-                // console.log(data)
                 resolve(true)
             } catch (error) {
                 reject(error)
@@ -38,7 +37,20 @@ export default () => {
                 const data = await $fetch('/api/auth/refresh')
                 
                 setToken(data.access_token)
-                resolve(TransformStreamDefaultController)
+                resolve(true)
+            } catch (error) {
+                reject(error)
+            }
+        })
+    }
+
+    const getUser = () => {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const data = await $fetch('/api/auth/user')
+                
+                setToken(data.access_token)
+                resolve(true)
             } catch (error) {
                 reject(error)
             }
@@ -47,9 +59,9 @@ export default () => {
 
     const initAuth = () => {
         return new Promise(async (resolve, reject) => {
-            // alert('working')
             try {
                 await refreshToken()
+                await getUser()
                 resolve(true)
             } catch (error) {
                 reject(error)
