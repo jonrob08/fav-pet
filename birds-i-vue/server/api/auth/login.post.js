@@ -1,7 +1,7 @@
 import { sendError } from "h3";
 import { getUser } from "~~/server/db/users";
 import bcrypt from "bcrypt"
-import { generateTokens } from "~~/server/utils/jwt";
+import { generateTokens, sendRefreshToken } from "~~/server/utils/jwt";
 import { userTransformer } from "~~/server/transformers/user";
 import { createRefreshToken } from "~~/server/db/refreshTokens";
 
@@ -46,7 +46,7 @@ export default defineEventHandler(async (event) => {
     userId: user.id
   })
   // add http only cookie
-
+  sendRefreshToken(event, refreshToken)
 
   return {
     // user: user,
