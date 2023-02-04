@@ -22,6 +22,7 @@
 - npx prisma db push (after model is created)
 - npm i bcrypt
 - npm i jsonwebtoken
+- npm i @tailwindcss/forms
 
 ### Dev Notes
 - it looks like prisma doesn't have a native way to exclude fields yet, but there are other options
