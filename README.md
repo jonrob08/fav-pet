@@ -1,6 +1,6 @@
-# Birds I Vue
+# America's Favorite Pet
 
-## twitter clone project to practice some vue techniques
+## cloning a website
 
 ### What I'll be using: 
 #### Nuxt 3
@@ -11,4 +11,4 @@
 #### Other stuff perhaps
 
 ## Commands Run:
-- npx nuxi init birds-i-vue
+- npx nuxi init fav-pet
