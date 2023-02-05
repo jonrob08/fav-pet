@@ -13,6 +13,10 @@ module.exports = {
     },
 
     extend: {
+      backgroundImage: {
+        'dog': "url('./assets/img/dogpet.jpeg')",
+        'footer-texture': "url('/img/footer-texture.png')",
+      },
       colors: {
         dim: {
           50: "#5f99f7",
