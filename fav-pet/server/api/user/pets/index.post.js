@@ -35,13 +35,13 @@ export default defineEventHandler(async (event) => {
       const imagePromises = Object.keys(files).map(async key => {
         const file = files[key]
 
-        const response = await uploadToCloudinary(file.filepath)
+        const cloudinaryResource = await uploadToCloudinary(file.filepath)
 
         console.log(response)
 
         return createImageFile({
-            url: '',
-            providerPublicId: 'random_id',
+            url: cloudinaryResource.secure_url,
+            providerPublicId: cloudinaryResource.public_id,
             userId: userId,
             petId: pet.id
         })
@@ -50,7 +50,6 @@ export default defineEventHandler(async (event) => {
       await Promise.all(imagePromises)
 
     return {
-        // pet: petTransformer(pet)
-        files
+        pet: petTransformer(pet)
     }
 })
