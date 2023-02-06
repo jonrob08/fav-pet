@@ -1,7 +1,7 @@
 <template>
     <div :class="{ 'dark': darkMode.dark }">
         <MainSection title="Home" :loading="loading" :darkMode="darkMode">
-            {{ user }}
+            <PetRegForm :user="user" />
         </MainSection>
     </div>
 </template>
