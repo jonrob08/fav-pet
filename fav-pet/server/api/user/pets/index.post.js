@@ -1,4 +1,5 @@
 import formidable from "formidable"
+import { createPet } from "~~/server/db/pets"
 
 export default defineEventHandler(async (event) => {
     const form = formidable({})
@@ -13,7 +14,22 @@ export default defineEventHandler(async (event) => {
 
     })
 
+    const { fields, files } = response
+
+    const userId = event.context?.auth?.user?.id
+
+    const petData = {
+        petName: fields.petName,
+        owner: {
+          connect: { id: userId }
+        },
+        email: fields.email,
+        mobile: fields.mobile
+      };
+
+    const pet = await createPet(petData)
+
     return {
-        hello: response
+        pet: pet
     }
 })
