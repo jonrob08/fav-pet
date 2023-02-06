@@ -1,5 +1,6 @@
 import formidable from "formidable"
 import { createPet } from "~~/server/db/pets"
+import { petTransformer } from "~~/server/transformers/pet"
 
 export default defineEventHandler(async (event) => {
     const form = formidable({})
@@ -30,6 +31,6 @@ export default defineEventHandler(async (event) => {
     const pet = await createPet(petData)
 
     return {
-        pet: pet
+        pet: petTransformer(pet)
     }
 })
