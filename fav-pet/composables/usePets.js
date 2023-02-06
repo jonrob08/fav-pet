@@ -6,6 +6,10 @@ export default () => {
         form.append('email', formData.email)
         form.append('mobile', formData.mobile)
 
+        formData.image.forEach((media, index) => {
+            form.append('media_file_' + index, media)
+        });
+
         return useFetchApi('api/user/pets', {
             method: 'POST',
             body: form

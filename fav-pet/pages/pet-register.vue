@@ -102,7 +102,12 @@ const props = defineProps({
 async function handleFormSubmit(data) {
     // console.log(data)
     try {
-        const response = await postPet(data)
+        const response = await postPet({
+            petName: data.petName,
+            email: data.email,
+            mobile: data.mobile,
+            image: data.image
+        })
         console.log(response)
     } catch (error) {
         console.log(error)

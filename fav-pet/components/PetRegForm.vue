@@ -37,6 +37,7 @@
                             </svg>
                             <input type="file" ref="imageInput" hidden
                                 accept="image/png, image/jpeg, image/jpg, image/svg"
+                                @change="handleImageChange"
                             >
                         </div>
                     </div>
@@ -66,6 +67,7 @@
 
 <script setup>
 const imageInput = ref('')
+const selectedFile = ref(null)
 const emits = defineEmits(['onSubmit'])
 const petName = ref('')
 const email = ref('')
@@ -81,12 +83,19 @@ function handleFormSubmit () {
     emits('onSubmit', {
         petName: petName.value,
         email: email.value,
-        mobile: mobile.value
+        mobile: mobile.value,
+        image: [selectedFile.value]
     })
 }
 
 function handleImageClick(){
     // alert('works')
     imageInput.value.click()
+}
+
+function handleImageChange(event){
+    // console.log(event)
+    const file = event.target.files[0]
+    selectedFile.value = file
 }
 </script>
