@@ -28,9 +28,10 @@ export default defineEventHandler(async (event) => {
         mobile: fields.mobile
       };
 
-    const pet = await createPet(petData)
+    // const pet = await createPet(petData)
 
     return {
-        pet: petTransformer(pet)
+        // pet: petTransformer(pet)
+        files
     }
 })
