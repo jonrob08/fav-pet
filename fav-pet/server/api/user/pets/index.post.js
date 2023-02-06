@@ -1,6 +1,7 @@
 import formidable from "formidable"
 import { createPet } from "~~/server/db/pets"
 import { petTransformer } from "~~/server/transformers/pet"
+import { createImageFile } from "~~/server/db/imageFiles"
 
 export default defineEventHandler(async (event) => {
     const form = formidable({})
@@ -27,8 +28,19 @@ export default defineEventHandler(async (event) => {
         email: fields.email,
         mobile: fields.mobile
       };
+      
+      const pet = await createPet(petData)
 
-    // const pet = await createPet(petData)
+      const imagePromises = Object.keys(files).map(async key => {
+        return createImageFile({
+            url: '',
+            providerPublicId: 'random_id',
+            userId: userId,
+            petId: pet.id
+        })
+      })
+
+      await Promise.all(imagePromises)
 
     return {
         // pet: petTransformer(pet)
