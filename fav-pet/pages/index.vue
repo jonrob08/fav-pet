@@ -1,11 +1,14 @@
 <template>
-    <div>
-        <MainSection title="Home" :loading="loading">
-            This is our home page
+    <div :class="{ 'dark': darkMode.dark }">
+        <MainSection title="Home" :loading="loading" :darkMode="darkMode">
+            {{ user }}
         </MainSection>
     </div>
 </template>
 <script setup>
 const loading = ref(false)
+const darkMode = reactive({dark: false});
+const { useAuthUser } = useAuth()
 
+const user = useAuthUser()
 </script>

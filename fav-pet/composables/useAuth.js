@@ -1,6 +1,7 @@
 export default () => {
     const useAuthToken = () => useState('auth_token')
     const useAuthUser = () => useState('auth_user')
+    const useAuthLoading = () => useState('auth_loading', () => true)
 
     const setToken = (newToken) => {
         const authToken = useAuthToken()
@@ -59,20 +60,48 @@ export default () => {
 
     const initAuth = () => {
         return new Promise(async (resolve, reject) => {
+            useAuthLoading().value = true
             try {
                 await refreshToken()
                 await getUser()
                 resolve(true)
             } catch (error) {
                 reject(error)
+            } finally {
+            useAuthLoading().value = false
             }
         })
     }
+
+    const signUp = ({username, password, email, repeatPassword, name}) => {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const data = await $fetch('/api/auth/register', {
+                    method: 'POST',
+                    body: {
+                        username,
+                        password,
+                        repeatPassword,
+                        email,
+                        name
+                    }
+                })
+                setToken(data.access_token)
+                setUser(data.user)
+                resolve(true)
+            } catch (error) {
+                reject(error)
+            }
+        })
+    }
+    
 
     return {
         login,
         useAuthUser,
         useAuthToken,
-        initAuth
+        initAuth,
+        useAuthLoading,
+        signUp
     }
 }
