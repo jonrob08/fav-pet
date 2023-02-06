@@ -2,6 +2,7 @@ import formidable from "formidable"
 import { createPet } from "~~/server/db/pets"
 import { petTransformer } from "~~/server/transformers/pet"
 import { createImageFile } from "~~/server/db/imageFiles"
+import { uploadToCloudinary } from "~~/server/utils/cloudinary"
 
 export default defineEventHandler(async (event) => {
     const form = formidable({})
@@ -32,6 +33,12 @@ export default defineEventHandler(async (event) => {
       const pet = await createPet(petData)
 
       const imagePromises = Object.keys(files).map(async key => {
+        const file = files[key]
+
+        const response = await uploadToCloudinary(file.filepath)
+
+        console.log(response)
+
         return createImageFile({
             url: '',
             providerPublicId: 'random_id',
