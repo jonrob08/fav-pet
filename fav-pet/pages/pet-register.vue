@@ -57,18 +57,18 @@
                 <div class="w-full md:w-5/12 md:ml-2">
                     <div class="mb-6">
                         <label class="block text-gray-700 font-medium mb-2 dark:text-white">Name</label>
-                        <input class="form-input w-full" type="text" name="name" id="registration_name" placeholder="Your pet's name"
-                            spellcheck="false" autocomplete="name" autocorrect="off">
+                        <input v-model="petName" class="form-input w-full text-black" type="text" name="name" id="registration_name" placeholder="Your pet's name"
+                            spellcheck="false" autocomplete="name" autocorrect="off" >
                     </div>
                     <div class="mb-6">
                         <label class="block text-gray-700 font-medium mb-2 dark:text-white">Email</label>
-                        <input class="form-input w-full" type="email" name="email" id="registration_email"
+                        <input class="form-input w-full text-black" type="email" name="email" id="registration_email"
                             placeholder="Your email" spellcheck="false" autocomplete="email" autocorrect="off"
                             autocapitalize="off">
                     </div>
                     <div class="mb-6">
                         <label class="block text-gray-700 font-medium mb-2 dark:text-white">Mobile Phone</label>
-                        <input class="form-input w-full" type="tel" name="phone" id="registration_phone" placeholder="Your phone number"
+                        <input class="form-input w-full text-black" type="tel" name="phone" id="registration_phone" placeholder="Your phone number"
                             spellcheck="false" autocomplete="tel" autocorrect="off" autocapitalize="off">
                         <p class="text-gray-600 text-xs dark:text-white">
                             When you provide us with your mobile phone number, you agree that we may send you text
@@ -104,7 +104,10 @@
             <section class="md:w-3/4 md:ml-auto mb-6 flex text-center">
                 <div>
                     <br>
-                    <input type="button" id="registration_button" value="Submit" class="bg-primary text-white rounded-lg px-5 py-3 hover:bg-primary-dark mx-auto">
+                    <div>
+                        <button @click="handleFormSubmit()" class="border border-black dark:border-white bg-amber-500 p-3 px-20">Submit</button>
+                    </div>
+
                     <br>
                     <p class="text-center">
                         By registering you agree to our <a href="/rules" class="text-lowercase">rules</a>, <a href="/terms" class="text-lowercase">terms</a>, and <a href="/privacy" class="text-lowercase">privacy policy</a>.
@@ -148,10 +151,17 @@
 </template>
 
 <script setup>
+const petName = ref('')
 const props = defineProps({
     user: {
         type: Object,
         required: true
     }
 })
+
+function handleFormSubmit () {
+    alert(JSON.stringify({
+        petName: petName.value
+    }))
+}
 </script>
