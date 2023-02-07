@@ -109,10 +109,10 @@
   <section class="bg-gray-100">
   <div class="container p-10">
     <div class="text-center">
-      <h5 class="border-b border-gray-300 mb-5 text-2xl">What's Gizmo’s favorite toy?</h5>
+      <h5 class="border-t border-gray-300 mb-5 text-2xl">What's Gizmo’s favorite toy?</h5>
       <p class="text-gray-700 text-3xl">Any hard bone or hard squeaky ball</p>
-      <h5 class="mt-10 border-b border-gray-300 mb-5 text-2xl">Why should they be the favorite dog?</h5>
-      <p class="text-gray-700 text-3xl">Gizmo should be America’s favorite dog because he is protective, friendly, energetic, full of life and brings a smile to everyone he meets</p>
+      <h5 class="mt-10 border-t border-gray-300 mb-5 text-2xl">Why should they be the favorite dog?</h5>
+      <p class="text-gray-700 text-3xl border-b">Gizmo should be America’s favorite dog because he is protective, friendly, energetic, full of life and brings a smile to everyone he meets</p>
     </div>
   </div>
 </section>
@@ -123,7 +123,7 @@
 
             <img src="../assets/img/paws-3x1.png" class="w-full">
 
-        <div class="container max-w-4xl mx-auto h-128 bg-white dark:bg-dim-900 absolute bottom-0 top-20 left-0 right-0 text-center p-8">
+        <div class="container max-w-4xl mx-auto h-128 mt-20 bg-white dark:bg-dim-900 opacity-90 absolute bottom-0 top-20 left-0 right-0 text-center p-8">
             <div class="p-8 text-center">
                 <h3 class="text-xl font-bold">Vote by Donation</h3>
                 <p class="text-base">
@@ -180,27 +180,7 @@
 
 
             <section id="contact" class="p-6 my-12 pt-80">
-                <footer class="text-center py-8">
-                    <div class="flex justify-center">
-                        <nuxt-link to="#" class="mr-6">
-                            <i class="fab fa-instagram text-2xl"></i>
-                        </nuxt-link>
-                        <nuxt-link to="#">
-                            <i class="fab fa-facebook text-2xl"></i>
-                        </nuxt-link>
-                    </div>
-                    <div class="mt-6 flex justify-center">
-                        <nuxt-link to="#" class="mr-8">Rules</nuxt-link>
-                        <nuxt-link to="#" class="mr-8">Terms</nuxt-link>
-                        <nuxt-link to="#" class="mr-8">Privacy</nuxt-link>
-                        <nuxt-link to="#" class="mr-8">Disclosures</nuxt-link>
-                        <nuxt-link to="#" class="mr-8">Support</nuxt-link>
-                        <nuxt-link to="#">Login</nuxt-link>
-                    </div>
-                    <div class="mt-8 text-sm">
-                        General footer stuff
-                    </div>
-                </footer>
+                <Footer />
             </section>
 
 
