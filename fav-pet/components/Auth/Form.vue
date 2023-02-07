@@ -6,9 +6,9 @@
             <!-- <h2> {{ data.password }}</h2> -->
             <UIInput label="Password" placeholder="********" type="password" v-model="data.password"/>
 
-            <div>
-                <button @click="handleLogin">Login</button>
-            </div>
+            <div class="flex items-center">
+            <button class="mx-auto bg-indigo-500 hover:bg-indigo-600 text-white font-medium py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline" @click="handleLogin">Login</button>
+        </div>
         </div>
     </div>
 </template>
