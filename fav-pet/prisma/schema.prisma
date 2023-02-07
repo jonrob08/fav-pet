@@ -1,0 +1,76 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  // this is deprecated, look into removing this but keep for now
+  previewFeatures = ["referentialIntegrity"]
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+  referentialIntegrity = "prisma"
+}
+
+model User {
+  // primary key, uses default value of auto generated id, maps the field to "_id", uses ObjectId - mongo-ifying it 
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  email String
+  // optional
+  name String?
+  username String @unique
+  password String
+  // optional
+  profileImage String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // relationships
+  refreshToken RefreshToken[]
+  pet Pet[]
+  petImages Image[]
+}
+
+model RefreshToken {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  token String @unique
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  userId String @db.ObjectId
+  user User @relation(fields: [userId], references: [id])
+}
+
+model Pet {
+    id String @id @default(auto()) @map("_id") @db.ObjectId
+    petName String
+    email String
+    mobile String
+
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+
+    // relationships
+    owner User @relation(fields: [ownerId], references: [id])
+    ownerId String @db.ObjectId
+    petImage Image[]
+}
+
+model Image {
+    id String @id @default(auto()) @map("_id") @db.ObjectId
+    url String
+    // for cloudinary
+    providerPublicId String
+
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+
+    // relationships
+    user User @relation(fields: [userId], references: [id])
+    userId String @db.ObjectId
+    pet Pet? @relation(fields: [petId], references: [id])
+    petId String? @db.ObjectId
+}
