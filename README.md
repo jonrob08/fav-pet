@@ -1,6 +1,6 @@
-# Birds I Vue
+# America's Favorite Pet
 
-## twitter clone project to practice some vue techniques
+## cloning a website
 
 ### What I'll be using: 
 #### Nuxt 3
@@ -11,6 +11,7 @@
 #### Other stuff perhaps
 
 ## Commands Run:
+
 - npx nuxi init birds-i-vue
 - npm i -D @nuxtjs/tailwindcss
 - npx tailwindcss init
@@ -28,3 +29,6 @@
 ### Dev Notes
 - it looks like prisma doesn't have a native way to exclude fields yet, but there are other options
 https://www.prisma.io/docs/concepts/components/prisma-client/excluding-fields
+=======
+- npx nuxi init fav-pet
+
