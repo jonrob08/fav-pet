@@ -2,9 +2,9 @@
     <div class="min-h-screen bg-slate-50 dark:bg-teal-900 dark:text-white">
         <header class=" dark:bg-teal-500 text-white sticky top 0 z-10">
             <section class="max-w-4xl mx-auto p-4 flex justify-between items-center">
-                <h1 class="text-3xl font-medium transition duration-500 scale-150 md:hover:scale-110">
+                <nuxt-link to="/" class="text-3xl font-medium transition duration-500 scale-150 md:hover:scale-110">
                     <img class="h-8" src="../assets/img/logo-h.svg" />
-                </h1>
+                </nuxt-link>
                 <div>
                     <button id="mobile-open-button" class="text-3xl sm:hidden focus:outline-none">
                         &#9776

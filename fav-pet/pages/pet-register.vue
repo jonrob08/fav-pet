@@ -1,5 +1,4 @@
 <template>
-
     <div class="min-h-screen bg-slate-50 dark:bg-teal-900 dark:text-white">
         <header class=" dark:bg-teal-500 text-white sticky top 0 z-10">
             <section class="max-w-4xl mx-auto p-4 flex justify-between items-center">
