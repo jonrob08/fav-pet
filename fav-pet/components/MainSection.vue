@@ -193,7 +193,7 @@
                         <nuxt-link to="#" class="mr-8">Privacy</nuxt-link>
                         <nuxt-link to="#" class="mr-8">Disclosures</nuxt-link>
                         <nuxt-link to="#" class="mr-8">Support</nuxt-link>
-                        <nuxt-link to="#">Login</nuxt-link>
+                        <nuxt-link to="#" class="mr-8">Login</nuxt-link>
                         <nuxt-link to="/pet-register" class="mr-8">Register Pet (demo)</nuxt-link>
                         <nuxt-link to="/pet-profile" class="mr-8">Pet Profile (demo)</nuxt-link>
                     </div>
