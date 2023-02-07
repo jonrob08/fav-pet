@@ -194,6 +194,8 @@
                         <nuxt-link to="#" class="mr-8">Disclosures</nuxt-link>
                         <nuxt-link to="#" class="mr-8">Support</nuxt-link>
                         <nuxt-link to="#">Login</nuxt-link>
+                        <nuxt-link to="/pet-register">Register Pet (demo)</nuxt-link>
+                        <nuxt-link to="/pet-profile">Pet Profile (demo)</nuxt-link>
                     </div>
                     <div class="mt-8 text-sm">
                         General footer stuff
