@@ -10,7 +10,7 @@ export default () => {
             form.append('media_file_' + index, media)
         });
 
-        return useFetchApi('api/user/pets', {
+        return useFetchApi('http://localhost:3000/pets', {
             method: 'POST',
             body: form
         })

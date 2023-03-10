@@ -1,29 +1,34 @@
 <template>
   <div class="min-h-screen bg-slate-50 dark:bg-teal-900 dark:text-white">
-    <Header />
+    <div class="text-3xl font-medium flex justify-center items-center">
+  <img class="h-80 w-auto" src="../assets/img/hers-logo-2.png" />
+</div>
+
     <main class="max-w-4xl mx-auto">
-      <section id="hero"
-        class="flex flex-col-reverse justify-center sm:flex-row p-6 items-center gap-8 mb-12 scroll-mt-40">
-        <article class="sm:w-1/2">
-          <h2
-            class="max-w-md text-4xl font-bold text-center sm:text-4xl sm:text-left text-slate-900 dark:text-white pt-20">
-            Register <span class="text-amber-500 dark:text-indigo-300">Yourself!</span>
-          </h2>
-        </article>
-      </section>
+      <div class="flex justify-center items-center">
+  <section id="hero" class="flex flex-col-reverse justify-center sm:flex-row mx-auto items-center gap-3 mb-12 scroll-mt-40">
+    <article class="">
+      <h2 class="max-w-md text-4xl font-bold text-center sm:text-4xl mx-auto  text-slate-900 dark:text-white pt-20">
+        <span class="text-sky-500 dark:text-indigo-300">Free</span> To Register
+      </h2>
+      <p class="text-center mx-auto mt-10">One woman will be featured on the cover of Muscle & Fitness HERS Magazine and take home $20,000 in cash. Do you have the strength and determination to take the title? Register below for consideration.</p>
+    </article>
+  </section>
+</div>
+
+
       <section class="p-0 pt-1">
-        <div class="container">
-          <img src="../assets/img/afp-logo.png" class="w-full shadow-md">
-        </div>
+
       </section>
       <form method="post">
         <div class="flex flex-col lg:flex-row">
           <div class="w-full lg:w-1/2 p-6">
             <div class="space-y-6">
               <UIInput label="Name" placeholder="Your full name" v-model="data.name" />
-              <UIInput label="Phone Number" placeholder="111-111-1111" v-model="data.phone" />
               <UIInput label="Email" placeholder="example@email.com" v-model="data.email" />
+              <UIInput label="Phone Number" placeholder="111-111-1111" v-model="data.phone" />
             </div>
+            <span class="text-slate-400 text-xs">When you provide us with your mobile phone number, you agree that we may send you text messages to that phone number. Message and data rates may apply.</span>
           </div>
           <div class="w-full lg:w-1/2 p-6">
             <div class="w-full md:w-3/12 md:ml-3">
@@ -65,7 +70,7 @@
         </div>
         <div class="flex flex-col items-center">
           <button @click="handleSignUp" v-on:click.prevent="validate"
-            class="border border-black dark:border-white bg-amber-500 rounded-xl p-3 mt-5 mb-5 px-20">Sign Up</button>
+            class="border border-black dark:border-white bg-sky-500 rounded-xl p-3 mt-5 mb-5 px-20">Submit</button>
         </div>
       </form>
       <hr class="mx-auto bg-black dark:bg-white w-10/12">

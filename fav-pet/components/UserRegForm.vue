@@ -5,8 +5,8 @@
                 <div class="w-full md:w-5/12 md:ml-2">
                     <div class="mb-6">
                         <label class="block text-gray-700 font-medium mb-2 dark:text-white">Name</label>
-                        <input v-model="petName" class="form-input w-full text-black" type="text" name="petName"
-                            id="registration_name" placeholder="Your pet's name" spellcheck="false" autocomplete="name"
+                        <input v-model="name" class="form-input w-full text-black" type="text" name="name"
+                            id="registration_name" placeholder="Your full name" spellcheck="false" autocomplete="name"
                             autocorrect="off">
                     </div>
                     <div class="mb-6">
@@ -17,7 +17,7 @@
                     </div>
                     <div class="mb-6">
                         <label class="block text-gray-700 font-medium mb-2 dark:text-white">Mobile Phone</label>
-                        <input v-model="mobile" class="form-input w-full text-black" type="tel" name="mobile"
+                        <input v-model="phone" class="form-input w-full text-black" type="tel" name="phone"
                             id="registration_phone" placeholder="Your phone number" spellcheck="false"
                             autocomplete="tel" autocorrect="off" autocapitalize="off">
                         <p class="text-gray-600 text-xs dark:text-white">
@@ -60,7 +60,7 @@
             <div>
                 <br>
                 <div>
-                    <button @click="handleFormSubmit()"
+                    <button @onSubmit="handleFormSubmit"
                         class="border border-black dark:border-white bg-amber-500 p-3 px-20">Submit</button>
                 </div>
 
@@ -76,14 +76,23 @@
 </template>
 
 <script setup>
+ let currentId = 7;
+  function generateId() {
+    return currentId++;
+  }
+
+
 const imageInput = ref('')
 const selectedFile = ref(null)
 const inputImageUrl = ref(null)
 
 const emits = defineEmits(['onSubmit'])
-const petName = ref('')
+const name = ref('')
 const email = ref('')
-const mobile = ref('')
+const phone = ref('')
+// const password = ref('')
+// const repeatPassword = ref('')
+// const fp = visitorId
 const props = defineProps({
     user: {
         type: Object,
@@ -93,9 +102,15 @@ const props = defineProps({
 
 function handleFormSubmit() {
     emits('onSubmit', {
-        petName: petName.value,
+        id: generateId(),
+        competitionId: 1,
+        name: name.value,
         email: email.value,
-        mobile: mobile.value,
+        phone: phone.value,
+        // password: password.value,
+        // repeatPassword: repeatPassword.value,
+        fp: fp,
+
         image: [selectedFile.value]
     })
 }
@@ -110,7 +125,7 @@ function handleImageChange(event) {
 
     const reader = new FileReader()
     reader.onload = (event) => {
-        // alert(event.target.result)
+        alert(event.target.result)
         inputImageUrl.value = event.target.result
     }
     reader.readAsDataURL(file)

@@ -16,6 +16,7 @@ datasource db {
 model User {
   // primary key, uses default value of auto generated id, maps the field to "_id", uses ObjectId - mongo-ifying it 
   id String @id @default(auto()) @map("_id") @db.ObjectId
+  fp String @db.String
   email String
   // optional
   name String?
@@ -23,6 +24,7 @@ model User {
   password String
   // optional
   profileImage String?
+  favThing String? @default("dogs")
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt

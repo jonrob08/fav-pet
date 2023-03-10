@@ -1,0 +1,367 @@
+{
+  "registrants": [
+    {
+      "competitionId": 1,
+      "name": "j",
+      "email": "j@j.com",
+      "phone": "7465",
+      "id": 1678111706147,
+      "hashId": "yzs9zerm",
+      "fingerprint": {}
+    },
+    {
+      "competitionId": 1,
+      "name": "kytf",
+      "email": "j@j.com",
+      "phone": "253523",
+      "id": 1678111968223,
+      "hashId": "a9bv0ir2",
+      "fingerprint": {}
+    },
+    {
+      "fp": "b7bae9334cc6fa7d3e07f45cfa8e1eb0",
+      "username": "aodfj",
+      "password": "poi",
+      "repeatPassword": "poi",
+      "email": "jon@jon.com",
+      "name": "Jon",
+      "id": 1678111968224
+    },
+    {
+      "fp": "b7bae9334cc6fa7d3e07f45cfa8e1eb0",
+      "username": "jonrob",
+      "password": "password",
+      "repeatPassword": "password",
+      "email": "jonrob08@gmail.com",
+      "name": "Jonathan ",
+      "id": 1678111968225
+    },
+    {
+      "id": 3,
+      "competitionId": 1,
+      "name": "asd",
+      "email": "asd",
+      "username": "asd",
+      "password": "asd",
+      "repeatPassword": "asd",
+      "fp": "d49beb304132ff30b537f58fdc49549f"
+    },
+    {
+      "id": 4,
+      "competitionId": 1,
+      "name": "asd",
+      "email": "asd",
+      "username": "asd",
+      "password": "asd",
+      "repeatPassword": "asd",
+      "fp": "d49beb304132ff30b537f58fdc49549f"
+    },
+    {
+      "id": 1,
+      "competitionId": 1,
+      "name": "werwer",
+      "email": "werwer",
+      "username": "werwer",
+      "password": "wer",
+      "repeatPassword": "wer",
+      "fp": "d49beb304132ff30b537f58fdc49549f"
+    },
+    {
+      "id": 6,
+      "competitionId": 1,
+      "name": "test1",
+      "email": "test@test",
+      "username": "test1",
+      "password": "test",
+      "repeatPassword": "test",
+      "fp": "d49beb304132ff30b537f58fdc49549f"
+    },
+    {
+      "id": 1678111968226
+    },
+    {
+      "id": 1678111968227
+    },
+    {
+      "id": 1678111968228
+    },
+    {
+      "id": 1678111968229
+    },
+    {
+      "id": 1678111968230
+    },
+    {
+      "id": 1678111968231
+    },
+    {
+      "id": 1678111968232
+    },
+    {
+      "id": 7,
+      "competitionId": 1,
+      "name": "vbvb",
+      "email": "vbvb",
+      "username": "vbvbv",
+      "password": "vbvb",
+      "repeatPassword": "vbvb",
+      "fp": "d49beb304132ff30b537f58fdc49549f"
+    },
+    {
+      "id": 22,
+      "competitionId": 1,
+      "name": "zxczxc",
+      "email": "zxczxc",
+      "username": "zxczxc",
+      "password": "zxc",
+      "repeatPassword": "zxc",
+      "fp": "d49beb304132ff30b537f58fdc49549f"
+    },
+    {
+      "id": 23,
+      "competitionId": 1,
+      "name": "zxczxc",
+      "email": "zxczxc",
+      "username": "zxczxc",
+      "password": "zxc",
+      "repeatPassword": "zxc",
+      "fp": "d49beb304132ff30b537f58fdc49549f"
+    },
+    {
+      "id": 25,
+      "competitionId": 1,
+      "name": "frfr",
+      "email": "frfr",
+      "username": "frfr",
+      "password": "frfr",
+      "repeatPassword": "frfr",
+      "fp": "d49beb304132ff30b537f58fdc49549f"
+    },
+    {
+      "id": 26,
+      "competitionId": 1,
+      "name": "hyyh",
+      "email": "hyyh",
+      "username": "hyyh",
+      "password": "hyyh",
+      "repeatPassword": "hyyh",
+      "fp": "d49beb304132ff30b537f58fdc49549f"
+    },
+    {
+      "id": 27,
+      "competitionId": 1,
+      "name": "bnbnb",
+      "email": "bbnb",
+      "username": "bnbn",
+      "password": "bnbn",
+      "repeatPassword": "bnbn",
+      "fp": "d49beb304132ff30b537f58fdc49549f",
+      "image": {}
+    },
+    {
+      "id": 28,
+      "competitionId": 1,
+      "name": "bnbnb",
+      "email": "bbnb",
+      "username": "bnbn",
+      "password": "bnbn",
+      "repeatPassword": "bnbn",
+      "fp": "d49beb304132ff30b537f58fdc49549f",
+      "image": {}
+    },
+    {
+      "id": 29,
+      "competitionId": 1,
+      "name": "gg",
+      "email": "gg",
+      "username": "gg",
+      "password": "gg",
+      "repeatPassword": "gg",
+      "fp": "d49beb304132ff30b537f58fdc49549f"
+    },
+    {
+      "id": 34,
+      "competitionId": 1,
+      "name": "test1",
+      "email": "test@test.com",
+      "username": "464-699-0739",
+      "password": "lkj",
+      "repeatPassword": "lkj",
+      "fp": "4521d494cc05307b48188ff5c59b851f"
+    },
+    {
+      "id": 40,
+      "hashId": "dbh9nmgt",
+      "competitionId": 1,
+      "name": "Jonathan Robson",
+      "email": "jonrob08@gmail.com",
+      "phone": "717-592-9969",
+      "fp": "b7bae9334cc6fa7d3e07f45cfa8e1eb0"
+    },
+    {
+      "id": 41,
+      "hashId": "6tfdm711",
+      "competitionId": 1,
+      "name": "Jonathan Robson",
+      "email": "jonrob08@gmail.com",
+      "phone": "717-592-9969",
+      "fp": "b7bae9334cc6fa7d3e07f45cfa8e1eb0"
+    },
+    {
+      "id": 45,
+      "hashId": "ztu9ep84",
+      "competitionId": 1,
+      "name": "Bob Bobbington",
+      "email": "bob@bob.com",
+      "phone": "777-777-7777",
+      "fp": "b7bae9334cc6fa7d3e07f45cfa8e1eb0"
+    }
+  ],
+  "registrantMeta": [
+    {
+      "registrantId": 6,
+      "i5pltt34": "v7hdxinj",
+      "id": 1
+    },
+    {
+      "registrantId": 1678111968229,
+      "tdme2f8o": "cb1779ga",
+      "id": 2
+    },
+    {
+      "registrantId": 1678111968230,
+      "dailty65": "h20oezsy",
+      "id": 3
+    },
+    {
+      "registrantId": 1678111968231,
+      "7vo5h33m": "nxdzwewv",
+      "id": 4
+    },
+    {
+      "registrantId": 1678111968232,
+      "0aelitar": "aunht1t9",
+      "id": 5
+    },
+    {
+      "registrantId": 7,
+      "d4s55hu5": "tntlf03i",
+      "id": 6
+    },
+    {
+      "registrantId": 22,
+      "z3rkw9ll": "dk1ek42t",
+      "id": 7
+    },
+    {
+      "registrantId": 23,
+      "o1xyycn5": "37o56wy3",
+      "id": 8
+    },
+    {
+      "registrantId": 25,
+      "x1tqnmz6": "vqb9iasy",
+      "id": 9
+    },
+    {
+      "registrantId": 26,
+      "6ffazuev": "5ylqra7r",
+      "id": 10
+    },
+    {
+      "registrantId": 27,
+      "5m5k7575": "oxcz4e1k",
+      "id": 11
+    },
+    {
+      "registrantId": 28,
+      "7yseiug0": "m02ixpfc",
+      "id": 12
+    },
+    {
+      "registrantId": 29,
+      "key": "8v1mx0fw",
+      "value": "avwu9v4b",
+      "id": 13
+    },
+    {
+      "registrantId": 34,
+      "key": "b9n7yxbu",
+      "value": "poziihkh",
+      "id": 14
+    },
+    {
+      "registrantId": 40,
+      "key": "wiutwrll",
+      "value": "i4b556mv",
+      "id": 15
+    },
+    {
+      "registrantId": 41,
+      "key": "2zzckilb",
+      "value": "q5rd4dxc",
+      "id": 16
+    },
+    {
+      "registrantId": 45,
+      "key": "4gnn5pem",
+      "value": "fbc9tkel",
+      "id": 17
+    }
+  ],
+  "presignedUrls": [
+    {
+      "filename": "711d8c16-f338-4731-a6a4-886cc2d07d34.png",
+      "id": 1
+    },
+    {
+      "filename": "b1ce431e-6d4f-46cf-81dd-14bb853fa0f8.png",
+      "id": 2
+    },
+    {
+      "filename": "2fafac59-6c7b-407f-ba0f-387461fee26f.png",
+      "id": 3
+    },
+    {
+      "filename": "98d91d9a-0d66-4be4-a1cc-e9ff50f7bee2.png",
+      "id": 4
+    },
+    {
+      "filename": "dfbb640d-3a0f-4679-8d49-87552c82b493.png",
+      "id": 5
+    },
+    {
+      "filename": "40.png",
+      "id": 6
+    },
+    {
+      "filename": "41.png",
+      "id": 7
+    },
+    {
+      "filename": "40.png",
+      "competitorId": 40,
+      "id": 8
+    },
+    {
+      "filename": "45.png",
+      "competitorId": 45,
+      "id": 9
+    },
+    {
+      "filename": "45.png",
+      "competitorId": 45,
+      "id": 10
+    },
+    {
+      "filename": "45.png",
+      "competitorId": 45,
+      "id": 11
+    }
+  ],
+  "pets": [
+    {
+      "id": 1
+    }
+  ]
+}
